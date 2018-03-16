@@ -3,8 +3,8 @@
 }
 
 .not {
-    background-color: #28374c;
-    border: 3px solid #6397c2;
+    background-color: #181818;
+    border: 3px solid #b39359;
     margin: 1em;
     font-weight: normal;
     border-radius: 0px;
@@ -12,17 +12,12 @@
     color: #fff;
     position: relative;
     overflow: hidden;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
 }
 
 .not:hover {
-   /* background-color: #6397c2;
-    border: 3px solid #28374c;
-    margin: 1em;*/
+    /*background: #b39359;
+    border: 3px solid #181818;
+    color: #181818;*/
 }
 
 .noticias-img {

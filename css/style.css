@@ -1,6 +1,6 @@
 /*
-    Theme Name: SUPER FORTE
-    Theme URL: https://bootstrapmade.com/SUPER FORTE-free-onepage-bootstrap-theme/
+    Theme Name: Hidrautec
+    Theme URL: https://bootstrapmade.com/Hidrautec-free-onepage-bootstrap-theme/
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
 */
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-header {
-  background: url("https://smartop.ind.br/wp-content/uploads/2016/03/4unnamed.jpg") no-repeat;
+  background: url("http://www.hidrautecparanavai.com.br/web/html/imagens/todos/10.jpg") no-repeat;
   background-size: cover;
   min-height: 610px;
 }
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  color: #6397c2;
+  color: #b8250d;
   text-transform: uppercase;
 	background-color: transparent;
 }
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-  color: #6397c2;
+  color: #b8250d;
 }
 
 .navbar-fixed-top {
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-nav-collapse {
   /*background: rgba(0, 0, 0, 0.8);*/
-  background: #28374c;
+  background: #181818;
   padding: 25px 0;
 }
 
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-submit {
-  background: #28374c;
+  background: #181818;
   border: 0px;
   display: inline-block;
   font-size: 16px;
@@ -165,12 +165,13 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   margin-top: 25px;
-  border: 2px solid #6397c2;
+  border: 2px solid #b8250d;
 }
 
 .btn-submit:hover {
-  background: #6397c2;
-  border: 2px solid #28374c;
+  background: #b39359;
+  border: 2px solid #181818;
+  color: #181818;
 }
 
 /****/
@@ -180,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-info {
-  border: 5px solid #6397c2;
+  border: 5px solid #b39359;
   padding: 40px 0px;
 }
 
@@ -199,13 +200,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .head-title {
-  color: #28374c;
+  color: #181818;
   font-size: 32px;
   font-weight: 700;
 }
 
 .botm-line {
-  background-color: #6397c2;
+  background-color: #b39359;
   width: 34px;
   height: 3px;
   display: inline-block;
@@ -240,6 +241,7 @@ p {
 
 .icon i {
   font-size: 35px;
+  color: #b8250d;
 }
 
 .icon-text {
@@ -343,15 +345,15 @@ h3.txt-tl {
 .btn-send {
   border-radius: 0px;
   color: #fff;
-  background-color: #28374c;
+  background-color: #181818;
 }
 .btn-send:hover {
   color: #fff;
-  background-color: #6397c2;
+  background-color: #b8250d;
 }
 
 a, a:hover {
-  color: #6397c2;
+  color: #b8250d;
 }
 
 .cont-title {
@@ -397,7 +399,7 @@ a, a:hover {
 /****/
 
 #footer {
-  background-color: #28374c;
+  background-color: #181818;
   padding: 20px 0px;
 }
 
