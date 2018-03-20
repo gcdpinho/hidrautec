@@ -8,9 +8,15 @@
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/custom.css">
   <!-- =======================================================
@@ -21,51 +27,101 @@
   ======================================================= -->
 </head>
 
-<body>
-  <!--header-->
-  <header class="main-header" id="header">
-    <div class="bg-color">
-      <!--nav-->
-      <nav class="nav navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="col-md-12">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false"
-                aria-controls="navbar">
-                <span class="fa fa-bars"></span>
-              </button>
-              <a href="index.html" class="navbar-brand">Hidrautec</a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="mynavbar">
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#header">Home</a>
-                </li>
-                <li>
-                  <a href="#feature">Serviços</a>
-                </li>
-                <li>
-                  <a href="#portfolio">Notícias</a>
-                </li>
-                <li>
-                  <a href="#contact">Contato</a>
-                </li>
-              </ul>
+<body><!--==========================
+  Header
+
+============================-->
+<header id="header">
+  <div class="container-fluid">
+    <meta name="description" content="Criação de Conteúdo para internet. Uma empresa voltada para o mundo digital apaixonada pelo que faz, com uma equipe ágil, competente e focada na evolução constante. Buscamos soluções inovadoras e serviços diferenciados para atender a cada cliente de forma única, pois acreditamos e valorizamos a essência do seu negócio.">
+    <div id="logo" class="pull-left">
+      <!-- <h1><a href="#intro" class="scrollto">Vulpis</a></h1> -->
+      <a href="#intro">
+        <img id="logo-header" src="img/logo-hidrautec.png" alt="Logo Vulpis" title="Logo Vulpis" />
+      </a>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active">
+          <a href="#intro">Home</a>
+        </li>
+        <li>
+          <a href="#feature">Serviços</a>
+        </li>
+        <li>
+          <a href="#portfolio">Notícias</a>
+        </li>
+        <li>
+          <a class="contato" href="#contact">Contato</a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
+  </div>
+</header>
+<!-- #header -->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url('img/intro-carousel/1.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Manutenção de Bombas Hidráulicas </h2>
+                <p>Procure atalhos, desenvolva estratégias e amplie sua visão de negócio. Não importa o tamanho da sua empresa,
+                  a internet é o principal caminho pra chegar no seu objetivo.</p>
+              </div>
             </div>
           </div>
+
+          <div class="carousel-item" style="background-image: url('img/intro-carousel/2.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Bomba de Palhetas</h2>
+                <p>Vivemos em um novo mundo, e você sabe disso. Vender online é a melhor maneira de alcançar seu cliente</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('img/intro-carousel/3.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Bomba de Pistão </h2>
+                <p>O Marketing Digital já faz parte da vida de qualquer pessoa com acesso à Internet, é difícil imaginar nosso
+                  cotidiano e sua empresa sem ele</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('img/intro-carousel/4.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Cilindro Hidráulico</h2>
+                <p>Facilite seu trabalho. Tenha um espaço dinâmico, interativo e sob-medida para qualquer necessidade</p>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </nav>
-      <!--/ nav-->
-      <div class="container text-center">
-        <div class="wrapper wow fadeInUp delay-05s">
-          <h2 class="top-title">massa polimérica</h2>
-          <h3 class="title">Hidrautec</h3>
-          <h4 class="sub-title">resistência da para assentamento </h4>
-          <a href="#contact" class="btn btn-submit">Entre em contato</a>
-        </div>
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
       </div>
     </div>
-  </header>
+  </section>
   <!--/ header-->
   <!---->
   <section id="cta-1">
@@ -84,70 +140,44 @@
   <section id="feature" class="section-padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 wow fadeInLeft delay-05s">
+        <div class="col-md-4 wow fadeInLeft delay-05s">
+          <h2 class="head-title">Serviços</h2>
+          <hr class="botm-line">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 wow fadeInLeft delay-05s">
           <div class="section-title">
-            <h2 class="head-title">Serviços</h2>
+            <h3 class="">Manutenção</h3>
             <hr class="botm-line">
-            <p class="sec-para">A massa polimérica para assentamento de tijolos Hidrautec, economia e agilidade em qualquer obra!</p>
+            <p class="sec-para">Bomba hidráulica </p>
+            <p class="sec-para">Cilindros Hidráulicos </p>
+            <p class="sec-para">Equipamentos Hidráulicos</p>
+            <p class="sec-para">Unidade Hidráulica</p>
           </div>
         </div>
-        <div class="col-md-9">
-          <div class="col-md-6 wow fadeInRight delay-02s">
-            <div class="icon">
-              <i class="fa fa-simplybuilt"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl">Manutenção de bombas hidráulicas</h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
+        <div class="col-md-4">
+          <div class="section-title">
+            <h3 class="">Motor</h3>
+            <hr class="botm-line">
+            <p class="sec-para">Hidráulico</p>
+            <p class="sec-para">Hidráulico Rotativo</p>
+            <p class="sec-para">Hidráulico Rotor</p>
           </div>
-          <div class="col-md-6 wow fadeInRight delay-02s">
-            <div class="icon">
-              <i class="fa fa-exclamation-triangle"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl"> Bomba de palhetas</h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
-          </div>
-          <div class="col-md-6 wow fadeInRight delay-04s">
-            <div class="icon">
-              <i class="fa fa-trash"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl">Bomba de pistão </h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
-          </div>
-          <div class="col-md-6 wow fadeInRight delay-04s">
-            <div class="icon">
-              <i class="fa fa-magic"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl">Bomba hidráulica</h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
-          </div>
-          <div class="col-md-6 wow fadeInRight delay-06s">
-            <div class="icon">
-              <i class="fa fa-lightbulb-o"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl">Cilindros Hidráulicos</h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
-          </div>
-          <div class="col-md-6 wow fadeInRight delay-06s">
-            <div class="icon">
-              <i class="fa fa-clock-o"></i>
-            </div>
-            <div class="icon-text">
-              <h3 class="txt-tl">Unidade Hidráulica</h3>
-              <p class="txt-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula felis euismod semper. </p>
-            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="section-title">
+            <h3 class="">Peças</h3>
+            <hr class="botm-line">
+            <p class="sec-para">EATON - Vickers </p>
+            <p class="sec-para">Pistão Hidráulico </p>
+            <p class="sec-para">Trocador de Calor Industiral</p>
+            <p class="sec-para">Unidade: de força hidráulica - hidráulica - hidráulica com cilindro</p>
+            <p class="sec-para">Atuador: Hidráulico - hidráulico linear - hidráulico rotativo</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -233,7 +263,7 @@
             <p class="sec-para black">Entre em contato conosco por e-mail ou através das nossas redes sociais!</p>
           </div>
         </div>
-        <div class="col-md-12 col-sm-12">
+        <div class="row">
           <div class="col-md-4 col-sm-6" style="padding-left:0px;">
             <h3 class="cont-title">Mande seu e-mail</h3>
             <div id="sendmessage">Sua mensagem está sendo enviada... Obrigado!</div>
@@ -270,7 +300,7 @@
             <h3 class="cont-title">Localização</h3>
             <div class="location-info">
               <p class="white">
-                <span aria-hidden="true" class="fa fa-map-marker"></span> ​Rua Vitor Presentino Venturi, 66 - Gaspar -  SC.</p>
+                <span aria-hidden="true" class="fa fa-map-marker"></span> ​Rua Vitor Presentino Venturi, 66 - Gaspar - SC.</p>
               <p class="white">
                 <span aria-hidden="true" class="fa fa-phone"></span>Telefone: (47) 99999-9999</p>
               <p class="white">
@@ -283,15 +313,14 @@
           </div>
           <div class="col-md-4">
             <div class="hidden-md hidden-sm hidden-xs">
-              <img src="img/LOGO-HIDRALTEC.png" alt="" class="img-responsive">
+              <img id="logo-contact" src="img/logo-hidrautec.png" alt="" class="img-responsive">
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!---->
-  <!---->
+  
   <footer class="" id="footer">
     <div class="container">
       <div class="row">
@@ -326,10 +355,21 @@
   </footer>
   <!---->
   <!--contact ends-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/wow.js"></script>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="contactform/contactform.js"></script>
 
