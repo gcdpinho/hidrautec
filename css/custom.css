@@ -535,3 +535,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     max-height: 85px !important;
     padding: 10px 0 !important;
 }
+
+.pd-30{
+    padding: 0 30px;
+}
