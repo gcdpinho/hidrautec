@@ -27,39 +27,61 @@
     }
   });
   // Navigation scrolls
-  $('.navbar-nav li a').bind('click', function (event) {
-    $('.navbar-nav li').removeClass('active');
-    $(this).closest('li').addClass('active');
-    var $anchor = $(this);
-    var nav = $($anchor.attr('href'));
-    if (nav.length) {
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - 90
-      }, 1500, 'easeInOutExpo');
+  // $('.navbar-nav li a').bind('click', function (event) {
+  //   $('.navbar-nav li').removeClass('active');
+  //   $(this).closest('li').addClass('active');
+  //   var $anchor = $(this);
+  //   var nav = $($anchor.attr('href'));
+  //   if (nav.length) {
+  //     $('html, body').stop().animate({
+  //       scrollTop: $($anchor.attr('href')).offset().top - 90
+  //     }, 1500, 'easeInOutExpo');
 
-      event.preventDefault();
-    }
-  });
+  //     event.preventDefault();
+  //   }
+  // });
 
-  // Intro carousel
-  var introCarousel = $(".carousel");
-  var introCarouselIndicators = $(".carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
-    (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
-      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
-  });
+   if ($('#nav-menu-container').length) {
+    var $mobile_nav = $('#nav-menu-container').clone().prop({
+      id: 'mobile-nav'
+    });
+    $mobile_nav.find('> ul').attr({
+      'class': '',
+      'id': ''
+    });
+    $('body').append($mobile_nav);
+    $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
+    $('body').append('<div id="mobile-body-overly"></div>');
+    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
 
-  $(".carousel").swipe({
-    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-      if (direction == 'left') $(this).carousel('next');
-      if (direction == 'right') $(this).carousel('prev');
-    },
-    allowPageScroll: "vertical"
-  });
+    $(document).on('click', '.menu-has-children i', function (e) {
+      $(this).next().toggleClass('menu-item-active');
+      $(this).nextAll('ul').eq(0).slideToggle();
+      $(this).toggleClass("fa-chevron-up fa-chevron-down");
+    });
 
-   // Smooth scroll for the menu and links with .scrollto classes
-   $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
+    $(document).on('click', '#mobile-nav-toggle', function (e) {
+      $('body').toggleClass('mobile-nav-active');
+      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+      $('#mobile-body-overly').toggle();
+    });
+
+    $(document).click(function (e) {
+      var container = $("#mobile-nav, #mobile-nav-toggle");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        if ($('body').hasClass('mobile-nav-active')) {
+          $('body').removeClass('mobile-nav-active');
+          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+          $('#mobile-body-overly').fadeOut();
+        }
+      }
+    });
+  } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+    $("#mobile-nav, #mobile-nav-toggle").hide();
+  }
+
+  // Smooth scroll for the menu and links with .scrollto classes
+  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -91,6 +113,25 @@
       }
     }
   });
+
+  // Intro carousel
+  var introCarousel = $(".carousel");
+  var introCarouselIndicators = $(".carousel-indicators");
+  introCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
+    (index === 0) ?
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+  });
+
+  $(".carousel").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'left') $(this).carousel('next');
+      if (direction == 'right') $(this).carousel('prev');
+    },
+    allowPageScroll: "vertical"
+  });
+
+ 
 
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function () {
