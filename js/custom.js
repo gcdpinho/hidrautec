@@ -41,7 +41,7 @@
   //   }
   // });
 
-   if ($('#nav-menu-container').length) {
+  if ($('#nav-menu-container').length) {
     var $mobile_nav = $('#nav-menu-container').clone().prop({
       id: 'mobile-nav'
     });
@@ -131,7 +131,12 @@
     allowPageScroll: "vertical"
   });
 
- 
+  $(".testimonials-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    items: 1
+  });
 
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function () {
@@ -141,6 +146,27 @@
       $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
 
+  });
+
+  $('.customer-logos').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    dots: false,
+      pauseOnHover: false,
+      responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
   });
 
 })(jQuery);
