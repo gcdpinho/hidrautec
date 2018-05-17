@@ -121,8 +121,6 @@ jQuery(document).ready(function ($) {
           subject: $("#subject").val(),
           message: $("#message").val()
         }
-
-        console.log(data);
     }
     $(".validation").each(function(){
       var current = $(this);
