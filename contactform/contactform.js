@@ -115,26 +115,14 @@ jQuery(document).ready(function ($) {
     });
     if (ferror) return false;
     else {
-      if ($(".orcamento").css("display") == "none")
         var data = {
-          type: "contato",
           name: $("#name").val(),
           email: $("#email").val(),
-          companyName: $("#companyName").val(),
+          subject: $("#subject").val(),
           message: $("#message").val()
         }
-      else
-        var data = {
-          type: "orcamento",
-          name: $("#name").val(),
-          email: $("#email").val(),
-          companyName: $("#companyName").val(),
-          service: getService($("#service").val()),
-          date: $("#date").val(),
-          site: $("input[name='site']:checked").val(),
-          logo: $("input[name='logo']:checked").val(),
-          message: $("#message").val()
-        }
+
+        console.log(data);
     }
     $(".validation").each(function(){
       var current = $(this);
